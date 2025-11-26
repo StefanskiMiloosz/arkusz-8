@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Układ Bloków v3 - Jeden Plik</title>
+    
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+
+        .block {
+            padding: 15px;
+            margin: 5px; 
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .middle-wrapper {
+            display: flex;
+        }
+
+        nav {
+            flex: 1; 
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        
+        main {
+            flex: 3; 
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="block">
+        Blok nagłówkowy
+    </header>
+
+    <div class="middle-wrapper">
+        <nav class="block">
+            Blok nawigacyjny
+            <div class="nav-block block">Blok 1</div>
+            <div class="nav-block block">Blok 2</div>
+            <div class="nav-block block">Blok 3</div>
+        </nav>
+        
+        <main class="block">
+            Blok główny
+            <section class="block">Sekcja 1</section>
+            <section class="block">Sekcja 2</section>
+            <section class="block">Sekcja 3</section>
+        </main>
+    </div>
+
+    <footer class="block">
+        Blok stopki
+    </footer>
+
+</body>
+</html>
